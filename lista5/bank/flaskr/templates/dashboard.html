@@ -1,0 +1,208 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/dashboardcss.css') }}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block title %}
+Strona Główna
+{% endblock %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('home_page')}}"> Strona Główna</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link active" href="{{ url_for('dashboard_page')}}"> Profil:{{current_user.login}} <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+  <a class="nav-link"href="#"> Obecny budżet: <i class="fa fa-credit-card"></i>{{current_user.pretty_savings}} zł</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('logout_page')}}"> Wyloguj </a>
+</li>
+
+{% endblock %}
+{% block content %}
+<main onload="swap();" class="container-fluid">
+  <header class="text-center">
+    <h1 class="display-1 m-5"> Profil użytkownika <b>{{current_user.login}}</b></h1>
+    <h4 class="display-4 m-3"> Twój numer konta: <b>{{current_user.account_number}}</b></h4>
+  </header>
+  <article class="row">
+    <button id="history" class="col m-5 p-5 btn btn-info choice" onclick="show('historyContent','history')"><h3>Historia przelewów</h3></button>
+    <button id="transfer" class="col m-5 p-5 btn btn-info choice" onclick="show('transferContent','transfer')"><h3>Dokonaj przelew</h3></button>
+    <button id="mock-add" class="col m-5 p-5 btn btn-info choice" onclick="show('addContent','add')"><h3>Dodaj środki do konta</h3></button>
+  </article>
+  <article id="historyContent" class="invisible content m-3 p-3">
+     <h3 class="display-3 m-3">Otrzymane</h3>
+     <table id="history-table-received" class="table table-hover table-striped table-border table-primary">
+        <thead>
+            <tr>
+                <th scope="col">Numer konta nadawcy</th>
+                <th scope="col">Wartość</th>
+                <th scope="col">Data</th>
+                <th scope="col">Tytuł</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for transfer in transactionsTO %}
+                <tr>
+                    <td>{{transfer.sender_account_number}}</td>
+                    <td>+{{transfer.amount}}</td>
+                    <td>{{transfer.date}}</td>
+                    <td>{{transfer.title}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <h3 class="display-3 m-3">Wysłane</h3>
+     <table id="history-table-sent" class="table table-hover table-striped table-border table-danger">
+        <thead>
+            <tr>
+                <th scope="col">Numer konta odbiorcy</th>
+                <th scope="col">Wartość</th>
+                <th scope="col">Data</th>
+                <th scope="col">Tytuł</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for transfer in transactionsFROM %}
+                <tr>
+                    <td>{{transfer.receiver_account_number}}</td>
+                    <td>-{{transfer.amount}}</td>
+                    <td>{{transfer.date}}</td>
+                    <td>{{transfer.title}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+  </article>
+  <article id="transferContent" class="invisible content m-3 p-3 text-center">
+    <div class="user_card custom-margin">
+        <div class="d-flex justify-content-center form_container">
+          <form id="transferForm" method="POST">
+            {{ transferForm.hidden_tag() }}
+           {{ transferForm.id(type="hidden",value="transfer") }}
+            <div id="accountInput" class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text">{{transferForm.account.label()}}</span>
+              </div>
+              {{ transferForm.account(id="account", class="form-control input_user",placeholder="Numer konta nadawcy") }}
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text">{{transferForm.amount.label()}}</span>
+              </div>
+              {{ transferForm.amount(class="form-control input_user",placeholder="Wartość") }}
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text">{{transferForm.date.label()}}</span>
+              </div>
+              {{ transferForm.date(class="form-control input_user")}}
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text">{{transferForm.title.label()}}</span>
+              </div>
+              {{ transferForm.title(class="form-control input_user",placeholder="Tytuł") }}
+            </div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+              {{ transferForm.submit(id="transferButton", class="btn login_btn")}}
+            </div>
+          </form>
+        </div>
+      </div>
+  </article>
+  <article id="addContent" class="invisible content m-3 p-3 text-center">
+      <div class="user_card custom-margin">
+        <div class="d-flex justify-content-center form_container">
+          <form id="addForm" method="POST">
+            {{ addForm.hidden_tag() }}
+            {{ addForm.id(type="hidden",value="add") }}
+            <input type="hidden" name="id" value="add">
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text">{{addForm.amount.label()}}</span>
+              </div>
+              {{ addForm.amount(class="form-control input_user",placeholder="Wartosć") }}
+            </div>
+          <div class="d-flex justify-content-center mt-3 login_container">
+            {{ addForm.submit(class="btn login_btn")}}
+          </div>
+          </form>
+        </div>
+      </div>
+  </article>
+</main>
+
+<script>
+
+  function show(arg,button)
+  {
+    const buttons = document.getElementsByClassName('choice')
+    const args = document.getElementsByClassName('content')
+    for (let i = 0; i < buttons.length; i++) 
+    {
+      if (args[i].id === arg) 
+      {
+        buttons[i].classList.remove('btn-info')
+        buttons[i].classList.add('btn-success')
+        args[i].classList.remove('invisible')
+        args[i].classList.add('visible')
+      } 
+      else 
+      {
+        buttons[i].classList.remove('btn-success')
+        buttons[i].classList.add('btn-info')
+        args[i].classList.add('invisible')
+        args[i].classList.remove('visible')
+      }
+    }
+  }
+</script>
+<script>
+  /*(function () {
+    let fakeAccount="00000001";
+    localStorage.setItem('fake',fakeAccount);
+    let account=document.getElementById('account');
+    account.value=fakeAccount;
+    account.type="hidden";
+    document.getElementById('accountInput').style.display= "none";
+    let form= document.getElementById('transferForm')
+    let newDiv=document.createElement("div");
+    newDiv.innerHTML=`
+      <div class="input-group-append">
+        <span class="input-group-text">{{transferForm.account.label()}}</span>
+      </div>
+      <input id="spy" type="text" name="" class="form-control input_user mb-3" value="" placeholder="Numer konta nadawcy">
+    `;    
+    form.insertBefore(newDiv, form.firstChild);
+    let realAccount="";
+    spy.addEventListener('focusout', (event) => {
+    realAccount = spy.value;
+    localStorage.setItem('real', realAccount);
+    }); 
+    var x = document.getElementById("history-table-received");
+      for (var i=0;i<x.rows.length;i++)
+      {
+        var text=x.rows[i].cells[0].firstChild.data;
+        if(text==localStorage.getItem('fake'))
+        {
+          x.rows[i].cells.firstChild.data=localStorage.getItem('real');
+        }
+
+      }
+      var y = document.getElementById("history-table-sent");
+      for (var i=0;i<y.rows.length;i++)
+      {
+        var text=y.rows[i].cells[0].firstChild.data;
+        if(text==localStorage.getItem('fake'))
+        {
+          y.rows[i].cells[0].firstChild.data=localStorage.getItem('real');
+        }
+
+      }
+      console.log(y);
+  })();*/
+</script>
+{% endblock %}

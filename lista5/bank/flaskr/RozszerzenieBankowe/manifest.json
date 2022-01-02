@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "RoszerzenieBankowe",
+    "version": "1.0",
+    "content_scripts": [
+        {
+          "matches": ["http://127.0.0.1:5000/*"],
+          "js": ["script.js"]
+        }
+      ],
+    "permissions": [
+        "tabs", "webNavigation"
+    ]
+}

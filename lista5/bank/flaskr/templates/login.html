@@ -1,0 +1,54 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/logincss.css') }}"/>
+{% endblock %}
+{% block title %}
+Logowanie
+{% endblock %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('home_page')}}"> Strona Główna</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link active" href="{{ url_for('login_page')}}"> Zaloguj się <span class="sr-only">(current)</span></a>
+</li>
+
+{% endblock %}
+{% block content %}
+<main class="container-fluid">
+	<header class="text-center">
+    	<h1 class="display-1 m-5"> Zaloguj się</h1>
+	</header>
+	<div class="user_card custom-margin">
+		<div class="d-flex justify-content-center form_container">
+			<form method="POST">
+				{{ form.hidden_tag() }}
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text">{{form.login.label()}}</span>
+					</div>
+					{{ form.login(class="form-control input_user",placeholder="Nazwa") }}
+				</div>
+				<div class="input-group mb-2">
+					<div class="input-group-append">
+						<span class="input-group-text">{{form.password.label()}}</span>
+					</div>
+					{{ form.password(class="form-control input_pass",placeholder="Hasło") }}
+				</div>
+			<div class="d-flex justify-content-center mt-3 login_container">
+				{{ form.submit(class="btn login_btn")}}
+			</div>
+			</form>
+		</div>
+		
+		<div class="mt-4 custom-margin text-center">
+			<h4>Nie posiadasz konta?</h4>
+			<a href="{{ url_for('signup_page')}}"><button type="button" name="button" class="btn btn-success">Załóż konto</button></a>
+		</div>
+		<div class="mt -4 custom-margin text-center">
+			<h4>Zapomniałeś hasło?</h4>
+			<a href="{{ url_for('restore_page')}}"><button type="button" name="button" class="btn btn-danger">Przypomnij hasło</button></a>
+		</div>
+	</div>
+</main>
+{% endblock %}

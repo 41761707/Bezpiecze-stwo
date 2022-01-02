@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/basecss.css') }}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block title %}
+Strona Główna
+{% endblock %}
+{% block nav %}
+<li class="nav-item active">
+  <a class="nav-link active" href="{{ url_for('home_page')}}"> Strona Główna <span class="sr-only">(current)</span></a>
+</li>
+{% if current_user.is_authenticated %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('dashboard_page')}}"> Profil:{{current_user.login}} </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link"href="#">Obecny budżet: <i class="fa fa-credit-card"></i> {{current_user.pretty_savings}} zł</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('logout_page')}}"> Wyloguj </a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('login_page')}}"> Zaloguj się </a>
+</li>
+{% endif %}
+
+{% endblock %}
+{% block content %}
+<main class="container-fluid">
+  <header class="text-center">
+    <h1 class="display-1 m-5"> Strona Główna</h1>
+  </header>
+  <article data-aos="fade-down" class="row m-3 p-3 text-center">
+    <section class="border bg-dark p-3 text-white border-round">
+      <h2 class="display-3">Sztuczna strona bankowa wykonana w ramach zajęć z przedmiotu "Bezpieczeństwo komputerowe"</h2>
+    </section>
+  </article>
+</main>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/restorecss.css') }}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block title %}
+Strona Główna
+{% endblock %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('home_page')}}"> Strona Główna</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('login_page')}}"> Zaloguj się </a>
+</li>
+
+{% endblock %}
+{% block content %}
+<main class="container-fluid">
+  <header class="text-center">
+    <h1 class="display-1 m-5"> Odzyskaj hasło</h1>
+  </header>
+  <div class="user_card custom-margin">
+    <div class="d-flex justify-content-center form_container">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="input-group mb-3">
+          <div class="input-group-append">
+            <span class="input-group-text">{{form.email.label()}}</span>
+          </div>
+         {{ form.email(class="form-control input_user",placeholder="przyklad@przyklad.com") }}
+        </div>
+      <div class="d-flex justify-content-center mt-3 login_container">
+        {{ form.submit(class="btn login_btn")}}
+      </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

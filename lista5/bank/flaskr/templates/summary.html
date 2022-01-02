@@ -1,0 +1,64 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/summary.css') }}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block title %}
+Strona Główna
+{% endblock %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('home_page')}}"> Strona Główna</a>
+</li>
+{% if current_user.is_authenticated %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('dashboard_page')}}"> Profil:{{current_user.login}} </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link"href="#">Obecny budżet: <i class="fa fa-credit-card"></i> {{current_user.pretty_savings}} zł</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('logout_page')}}"> Wyloguj </a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('login_page')}}"> Zaloguj się </a>
+</li>
+{% endif %}
+
+{% endblock %}
+{% block content %}
+<main class="container-fluid">
+  <header class="text-center">
+    <h1 class="display-1 m-5"> Potwierdzenie przelewu</h1>
+    <div>
+      <h3> Numer konta nadawcy:</h3>
+      <h5> {{sender_account_number}}</h5>
+    </div>
+    <div id="sender">
+      <h3> Numer konta odbiorcy:</h3>
+      <h5> {{receiver_account_number}}</h5>
+    </div>
+    <div>
+      <h3> Wartość: </h3>
+      <h5> {{amount}} zł</h5>
+    </div>
+      <h3> Data: </h3>
+      <h5> {{date}}</h5>
+    <div>
+      <h3> Tytułem:</h3>
+      <h5> {{title}}</h5>
+    </div>    <a href="{{ url_for('dashboard_page')}}"><button class="btn btn-danger">Powrót</button></a>
+  </header>
+</main>
+
+<script>
+  (function () {
+    /*let sender=document.getElementById('sender');
+    sender.innerHTML=`
+      <h3> Numer konta odbiorcy:</h3>
+      ${localStorage.getItem('real')}
+    `;
+  })();*/
+</script>
+{% endblock %}

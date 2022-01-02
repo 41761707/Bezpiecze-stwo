@@ -1,0 +1,357 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.24)  7 NOV 2021 22:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Raport.tex
+(./Raport.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count175
+\mult@box=\box45
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count176
+\c@collectmore=\count177
+\doublecol@number=\count178
+\multicoltolerance=\count179
+\multicolpretolerance=\count180
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box46
+\last@line=\box47
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box48
+\mult@grightbox=\box49
+\mult@gfirstbox=\box50
+\mult@firstbox=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\c@minrows=\count181
+\c@columnbadness=\count182
+\c@finalcolumnbadness=\count183
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box89
+\colbreak@box=\box90
+\mc@col@check@num=\count184
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen144
+\lightrulewidth=\dimen145
+\cmidrulewidth=\dimen146
+\belowrulesep=\dimen147
+\belowbottomsep=\dimen148
+\aboverulesep=\dimen149
+\abovetopsep=\dimen150
+\cmidrulesep=\dimen151
+\cmidrulekern=\dimen152
+\defaultaddspace=\dimen153
+\@cmidla=\count185
+\@cmidlb=\count186
+\@aboverulesep=\dimen154
+\@belowrulesep=\dimen155
+\@thisruleclass=\count187
+\@lastruleclass=\count188
+\@thisrulewidth=\dimen156
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count189
+\l__pdf_internal_box=\box91
+)
+(./Raport.aux)
+\openout1 = `Raport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count190
+\scratchdimen=\dimen159
+\scratchbox=\box92
+\nofMPsegments=\count191
+\nofMParguments=\count192
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count193
+\MPscratchDim=\dimen160
+\MPnumerator=\count194
+\makeMPintoPDFobject=\count195
+\everyMPtoPDFconversion=\toks16
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--49
+\T1/cmr/m/n/10.95 NETIASPOT-2.4GHz-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--49
+\T1/cmr/m/n/10.95 NETIASPOT-2.4GHz-
+ []
+
+
+Overfull \hbox (10.32693pt too wide) in paragraph at lines 40--49
+\T1/cmr/m/n/10.95 Internet_Domowy_4A302F 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--49
+
+ []
+
+[2]
+Overfull \hbox (12.88293pt too wide) in paragraph at lines 63--66
+\T1/cmr/m/n/12 danych otrzy-manych w ra-mach ekspery-mentu. Za-uwa»amy, »e je-d
+yni u»ytkown-
+ []
+
+
+Overfull \hbox (12.37444pt too wide) in paragraph at lines 71--72
+[]\T1/cmr/m/n/12 Cz¦±¢ z otrzy-manych ser-wisów (Przykªad: \T1/cmr/m/it/12 con-
+nec-tiv-i-ty-check.android.com\T1/cmr/m/n/12 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
+
+ []
+
+
+Overfull \hbox (8.0207pt too wide) in paragraph at lines 104--104
+ []\T1/cmr/m/n/8 api.flightproxy.teams.microsoft.com 
+ []
+
+
+Overfull \hbox (29.32661pt too wide) in paragraph at lines 111--111
+ []\T1/cmr/m/n/8 blob.byaprdstr10a.store.core.windows.net 
+ []
+
+
+Overfull \hbox (2.15964pt too wide) in paragraph at lines 127--127
+ []\T1/cmr/m/n/8 emea.ng.msg.teams.microsoft.com 
+ []
+
+
+Overfull \hbox (7.53471pt too wide) in paragraph at lines 129--129
+ []\T1/cmr/m/n/8 eudb.clients.config.office.akadns.net 
+ []
+
+[4]
+Overfull \hbox (2.78032pt too wide) in paragraph at lines 148--148
+ \T1/cmr/m/n/8 ip.westeurope.cloudapp.azure.com 
+ []
+
+
+Overfull \hbox (4.71596pt too wide) in paragraph at lines 148--148
+ []\T1/cmr/m/n/8 mamservice.manage.microsoft.com 
+ []
+
+
+Overfull \hbox (52.21686pt too wide) in paragraph at lines 152--152
+ []\T1/cmr/m/n/8 onedscolprdcus12.centralus.cloudapp.azure.com 
+ []
+
+
+Overfull \hbox (41.63472pt too wide) in paragraph at lines 152--152
+ []\T1/cmr/m/n/8 onedscolprdeus00.eastus.cloudapp.azure.com 
+ []
+
+
+Overfull \hbox (45.64763pt too wide) in paragraph at lines 152--152
+ []\T1/cmr/m/n/8 onedscolprdwus11.westus.cloudapp.azure.com 
+ []
+
+
+Overfull \hbox (12.46545pt too wide) in paragraph at lines 167--167
+ \T1/cmr/m/n/8 dns.northeurope.cloudapp.azure.com 
+ []
+
+[5]
+Overfull \hbox (13.63878pt too wide) in paragraph at lines 170--170
+ \T1/cmr/m/n/8 d5b3.westeurope.cloudapp.azure.com 
+ []
+
+[6] [7]
+<./img/Wroclavia_map_eu.png, id=34, 487.22025pt x 376.40625pt>
+File: ./img/Wroclavia_map_eu.png Graphic file (type png)
+<use ./img/Wroclavia_map_eu.png>
+Package pdftex.def Info: ./img/Wroclavia_map_eu.png  used on input line 263.
+(pdftex.def)             Requested size: 184.9429pt x 142.87503pt.
+<./img/Wroclavia_map_us.png, id=35, 538.4115pt x 298.11375pt>
+File: ./img/Wroclavia_map_us.png Graphic file (type png)
+<use ./img/Wroclavia_map_us.png>
+Package pdftex.def Info: ./img/Wroclavia_map_us.png  used on input line 264.
+(pdftex.def)             Requested size: 184.9429pt x 102.39902pt.
+<./img/KD_map_eu.png, id=36, 511.9125pt x 390.258pt>
+File: ./img/KD_map_eu.png Graphic file (type png)
+<use ./img/KD_map_eu.png>
+Package pdftex.def Info: ./img/KD_map_eu.png  used on input line 266.
+(pdftex.def)             Requested size: 184.9429pt x 140.99297pt.
+<./img/KD_map_us.png, id=37, 565.51276pt x 308.352pt>
+File: ./img/KD_map_us.png Graphic file (type png)
+<use ./img/KD_map_us.png>
+Package pdftex.def Info: ./img/KD_map_us.png  used on input line 267.
+(pdftex.def)             Requested size: 184.9429pt x 100.84369pt.
+
+Overfull \hbox (1.17505pt too wide) in paragraph at lines 271--272
+\T1/cmr/m/n/12 Wi¦kszo±¢ u»ytkown-ików smart-fonów b¡d¹ lap-topów w miejs-cach 
+pub-licznych
+ []
+
+[8 <./img/Wroclavia_map_eu.png> <./img/Wroclavia_map_us.png> <./img/KD_map_eu.p
+ng> <./img/KD_map_us.png>] [9] (./Raport.aux) ) 
+Here is how much of TeX's memory you used:
+ 1591 strings out of 483183
+ 21857 string characters out of 5966291
+ 260286 words of memory out of 5000000
+ 16625 multiletter control sequences out of 15000+600000
+ 543166 words of font info for 46 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 30i,6n,25p,554b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/radikey/.texlive2019/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/radikey/.texlive2019/
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/radikey/.texlive20
+19/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/radikey/.texliv
+e2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/radikey/.tex
+live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/radikey/.
+texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/radike
+y/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/rad
+ikey/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/
+radikey/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
+Output written on Raport.pdf (9 pages, 1457748 bytes).
+PDF statistics:
+ 390 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

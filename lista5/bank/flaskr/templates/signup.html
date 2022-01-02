@@ -1,0 +1,57 @@
+{% extends 'template.html' %}
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='stylesheets/signupcss.css') }}"/>
+{% endblock %}
+{% block title %}
+Strona Główna
+{% endblock %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('home_page')}}"> Strona Główna</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{ url_for('login_page')}}"> Zaloguj się </a>
+</li>
+
+{% endblock %}
+{% block content %}
+<main class="container-fluid">
+  <header class="text-center">
+    <h1 class="display-1 m-5"> Zarejestruj się</h1>
+  </header>
+  <div class="user_card custom-margin">
+    <div class="d-flex justify-content-center form_container">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="input-group mb-3">
+          <div class="input-group-append">
+            <span class="input-group-text">{{form.login.label()}}</span>
+          </div>
+          {{ form.login(class="form-control input_user",placeholder="Nazwa") }}
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-append">
+            <span class="input-group-text">{{form.email.label()}}</span>
+          </div>
+          {{ form.email(class="form-control input_user",placeholder="przykład@przykład.gmail") }}
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-append">
+            <span class="input-group-text">{{form.password1.label()}}</span>
+          </div>
+          {{ form.password1(class="form-control input_pass",placeholder="Hasło") }}
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-append">
+            <span class="input-group-text">{{form.password2.label()}}</span>
+          </div>
+          {{ form.password2(class="form-control input_pass",placeholder="Hasło") }}
+        </div>
+      <div class="d-flex justify-content-center mt-3 login_container">
+        {{ form.submit(class="btn login_btn")}}
+      </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
